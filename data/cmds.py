@@ -11,8 +11,13 @@ class Cmds:
     return
   
   @commands.command()
+  async def ahoj(self):
+    await self.bot.say('**Ahoj :D**')
+    return
+  
+  @commands.command()
   async def ping(self):
-    await self.bot.say('pong')
+    await self.bot.say('**ping:** {} ms'.format(round(self.bot.latency, 1)))
     return
 
     
