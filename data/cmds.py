@@ -6,8 +6,8 @@ class Cmds:
     self.bot = bot
     
   @commands.command()
-  async def test(self):
-    await self.bot.say('test')
+  async def ping(self):
+    await self.bot.say('pong')
 
     
 def setup(bot):
