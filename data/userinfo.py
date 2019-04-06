@@ -11,6 +11,7 @@ class Userinfo:
       user = ctx.message.author
       
     await self.bot.say('userinfo command je v modu nastavování')
+    await self.bot.say('user <@{}>'.format(user.id))
     return
 
     
