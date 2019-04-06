@@ -7,9 +7,13 @@ class Helper:
     
   @commands.command()
   async def help(self):
-    await self.bot.say('**4 |General:**   `ping, ahoj, help, userinfo `')
-    await self.bot.say('**3 |Fun:**  `number, rdance, fortmap `')
-    await self.bot.say('**2 |Bot:**  `invite, veo_server `')
+    
+    embed=discord.Embed(title="**Help**", description=" ", color=0x54ce1a)
+    embed.set_author(name=" ")
+    embed.add_field(name="**4 |General:**", value="`ping, ahoj, help, userinfo `", inline=True)
+    embed.add_field(name="**3 |Fun:**", value="`number, rdance, fortmap `", inline=True)
+    embed.add_field(name="**2 |Bot:**", value="`number, rdance, fortmap `", inline=True)
+    await self.bot.send_message(ctx.message.channel, embed=embed)
     return
 
     
