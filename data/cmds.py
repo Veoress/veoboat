@@ -20,7 +20,7 @@ class Cmds:
     await self.bot.send_message(ctx.message.channel, embed=embed)
     return
   
-  @bot.command()
+  @command.command()
   async def ahoj(self):
     await self.bot.say('Ahoj :D')
     return
