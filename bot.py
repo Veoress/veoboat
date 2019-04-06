@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
@@ -73,3 +74,5 @@ async def userinfo(ctx, user: discord.Member=None):
 @bot.command(pass_context=True)
 async def number(ctx):
 	await bot.say(random.randint(1,100))
+	
+bot.run(os.environ["BOT_TOKEN"])
