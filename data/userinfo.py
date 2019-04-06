@@ -6,11 +6,10 @@ class Userinfo:
     self.bot = bot
     
   @commands.command()
-  async def userinfo(self, user: discord.User=None):
+  async def userinfo(self, ctx, user: discord.User=None):
     if not user:
-      user = message.author
+      user = ctx.message.author
     
-    await self.bot.say('{} user načten'.format(user.name))
     await self.bot.say('userinfo command je v modu nastavování')
     return
 
