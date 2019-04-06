@@ -7,9 +7,7 @@ class Cmds:
     
   @commands.command()
   async def load(self):
-    await self.bot.say('**test Help 4 |General:**   `ping, ahoj, help, userinfo `')
-    await self.bot.say('**test Help 3 |Fun:**  `number, rdance, fortmap `')
-    await self.bot.say('**test Help 2 |Bot:**  `invite, veo_server `')
+    await self.bot.say('uložiště: **COMMANDS** bylo načteno')
     return
 
     
