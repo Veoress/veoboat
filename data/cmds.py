@@ -14,7 +14,11 @@ class Cmds:
   async def ahoj(self):
     await self.bot.say('**Ahoj :D**')
     return
-  
+  @bot.command(pass_context=True)
+  async def number(ctx):
+    await self.bot.say(random.randint(1,100))
+    return
+    
   @commands.command(pass_context=True)
   async def fortmap(self, ctx):
     embed=discord.Embed(title=" ", description=" ", color=0xb51ea9)
