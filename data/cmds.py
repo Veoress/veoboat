@@ -10,9 +10,9 @@ class Cmds:
     await self.bot.say('uložiště: **COMMANDS** bylo načteno')
     return
   
-  @command.command()
+  @commands.command()
   async def ping(self):
-    await self.bot.say('Ping: {0}'.format(round(self.bot.latency, 1)))
+    await self.bot.say('pong')
     return
 
     
