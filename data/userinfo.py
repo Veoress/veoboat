@@ -15,11 +15,9 @@ class Userinfo:
     embed.set_image(url=user.avatar_url)
     embed.add_field(name="**STATUS**", value=" {} ".format(user.status), inline=True)
     embed.add_field(name="**NEJVĚTŠÍ ROLE**", value=" {} ".format(user.top_role.mention), inline=True)
-    embed.add_field(name="**PŘIPOJIL SE**", value=" {} ".format(user.joined_at.strftime(" %d %n %Y  %k:%M:%S ")), inline=False)
+    embed.add_field(name="**PŘIPOJIL SE**", value=" {} ".format(user.joined_at.strftime(" %-d.%-m %Y \n %k:%M:%S ")), inline=False)
     embed.add_field(name="**ID**", value=" {} ".format(user.id), inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
-    
-    await self.bot.say('userinfo command je v modu nastavování')
     return
 
     
