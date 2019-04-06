@@ -6,7 +6,7 @@ class Helper:
     self.bot = bot
     
   @commands.command()
-  async def help(self):
+  async def help(self, ctx):
     
     embed=discord.Embed(title="**Help**", description=" ", color=0x54ce1a)
     embed.set_author(name=" ")
