@@ -14,9 +14,9 @@ extensions = [ 'data.help', 'data.cmds']
 async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
-        await bot.change_presence(game=discord.Game(name='{} | prefix'.format(bot.command_prefix))) 
+        await bot.change_presence(game=discord.Game(name='{} | prefix'.format("~"))) 
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name='{}help'.format(bot.command_prefix)))
+        await bot.change_presence(game=discord.Game(name='{}help'.format("~")))
         await asyncio.sleep(10)
         await bot.change_presence(game=discord.Game(name='GamingNetwork Server'))
         await asyncio.sleep(10)
