@@ -6,8 +6,8 @@ class Helper:
     self.bot = bot
     
   @commands.command()
-  async def ping(self):
-    await self.bot.say('pong')
+  async def help(self):
+    await self.bot.say('help command není nastaven')
 
     
 def setup(bot):
