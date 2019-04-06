@@ -1,4 +1,11 @@
-@command.command(pass_context=True)
+import discord
+from discord.ext import commands
+
+class Userinfo:
+  def __init__(self, bot):
+    self.bot = bot
+    
+  @command.command(pass_context=True)
   async def userinfo(self, ctx, user: discord.Member=None):
     if not user:
       user = ctx.message.author
@@ -12,3 +19,7 @@
     embed.add_field(name="ID", value=" {} ".format(user.id), inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     return
+
+    
+def setup(bot):
+  bot.add_cog(Userinfo(bot))
