@@ -6,19 +6,19 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 
 
-bot=commands.Bot(command_prefix='!')
+bot=commands.Bot(command_prefix='~')
 bot.remove_command('help')
 
-extensions = []
+extensions = [ 'help', 'cmds']
 
 async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
-        await bot.change_presence(game=discord.Game(name='test3')) 
+        await bot.change_presence(game=discord.Game(name='Developer')) 
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name='test2'))
+        await bot.change_presence(game=discord.Game(name='Developer'))
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="test1"))
+        await bot.change_presence(game=discord.Game(name="~help"))
         await asyncio.sleep(10)
         
 @bot.event
