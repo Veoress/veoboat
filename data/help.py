@@ -12,7 +12,7 @@ class Helper:
     await self.bot.say('**2 |Bot:**  `invite, veo_server `')
     return
   
-  @bot.command()
+  @command.command()
   async def ping(self):
     await self.bot.say('Pong! {0}'.format(round(self.bot.latency, 1)))
     return
