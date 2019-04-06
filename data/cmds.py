@@ -4,14 +4,9 @@ from discord.ext import commands
 class Cmds:
   def __init__(self, bot):
     self.bot = bot
-    
-  @commands.command()
-  async def ping(self):
-    await self.bot.say('pong')
-    return
   
   @command.command(pass_context=True)
-  async def userinfo(ctx, user: discord.Member=None):
+  async def userinfo(self, ctx, user: discord.Member=None):
     if not user:
       user = ctx.message.author
 
@@ -23,6 +18,11 @@ class Cmds:
     embed.add_field(name="PŘIPOJIL SE", value=" {} ".format(user.joined_at.strftime(" %d %n %Y  %k:%M:%S ")), inline=False)
     embed.add_field(name="ID", value=" {} ".format(user.id), inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
+    return
+  
+  @bot.command()
+  async def ahoj(self):
+    await self.bot.say('Ahoj :D')
     return
 
     
