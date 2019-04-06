@@ -5,9 +5,9 @@ class Userinfo:
   def __init__(self, bot):
     self.bot = bot
     
-  @command.command(pass_context=True)
+  @commands.command()
   async def userinfo(self):
-    await self.bot.say("test userinfo repository")
+    await self.bot.say('userinfo command je v modu nastavování')
     return
 
     
