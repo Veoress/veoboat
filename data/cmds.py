@@ -15,10 +15,13 @@ class Cmds:
     await self.bot.say('**Ahoj :D**')
     return
   
-  @commands.command()
-  async def ping(self):
-    await self.bot.say('**ping:** {} ms'.format(self.bot.latency))
-    return
+  @commands.command(pass_context=True)
+  async def ping(self, ctx):
+    channel = ctx.message.channel
+    t1 = time.perf_counter()
+    await self.bot.send_typing(channel)
+    t2 = time.perf_counter()
+    await self.bot.say("**ping:** {} ms".format(round((t2-t1)*1000)))
 
     
 def setup(bot):
