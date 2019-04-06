@@ -17,7 +17,7 @@ class Cmds:
   
   @commands.command()
   async def ping(self):
-    await self.bot.say('**ping:** {} ms'.format(round(self.bot.latency, 1)))
+    await self.bot.say('**ping:** {} ms'.format(self.bot.latency))
     return
 
     
