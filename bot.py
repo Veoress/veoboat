@@ -9,7 +9,7 @@ from discord.ext.commands import Bot
 bot=commands.Bot(command_prefix='~')
 bot.remove_command('help')
 
-extensions = [ 'data.help', 'data.cmds', 'data.userinfo']
+extensions = [ 'data.help', 'data.join', 'data.cmds', 'data.userinfo']
 
 async def my_background_task():
     await bot.wait_until_ready()
