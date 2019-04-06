@@ -33,7 +33,6 @@ if __name__ == '__main__':
       bot.load_extension(extension)
     except Exception as error:
       print('{} cannot be loaded. [{}]'.format(extension, error))
-      await bot.say('command {} nenalezen'.format(command))
  
 bot.loop.create_task(my_background_task())
 bot.run(os.environ['BOT_TOKEN'])
