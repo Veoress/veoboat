@@ -14,11 +14,13 @@ extensions = [ 'data.help', 'data.cmds']
 async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
-        await bot.change_presence(game=discord.Game(name='Developer')) 
+        await bot.change_presence(game=discord.Game(name='{} | prefix'.format(prefix))) 
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name='Developer'))
+        await bot.change_presence(game=discord.Game(name='{}help'.format(prefix)))
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="~help"))
+        await bot.change_presence(game=discord.Game(name='GamingNetwork Server'))
+        await asyncio.sleep(10)
+        await bot.change_presence(game=discord.Game(name='Developed by ×Vēørēs×#0095'))
         await asyncio.sleep(10)
         
 @bot.event
