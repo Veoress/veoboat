@@ -9,6 +9,16 @@ class Cmds:
   async def load(self):
     await self.bot.say('uložiště: **COMMANDS** bylo načteno')
     return
+  
+  @commands.command()
+  async def ahoj(self):
+    await self.bot.say('Ahoj :D')
+    return
+  
+  @bot.command()
+  async def ping(self):
+    await self.bot.say('Ping: {0}'.format(round(self.bot.latency, 1)))
+    return
 
     
 def setup(bot):
