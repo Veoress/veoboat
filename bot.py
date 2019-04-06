@@ -25,7 +25,7 @@ async def my_background_task():
         
 @bot.event
 async def on_ready():
-    print("hi")
+    print("{} was loaded".format(bot.user.name))
     
 if __name__ == '__main__':
   for extension in extensions:
