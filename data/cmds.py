@@ -19,7 +19,7 @@ class Cmds:
   async def fortmap(self, ctx):
     embed=discord.Embed(title="**Fortnite Map**", description="** **", color=0xb51ea9)
     embed.set_author(name=" ")
-    embed.set_image(url="https://media.deseretdigital.com/file/8d92395855?resize=width_1200&type=jpg&c=6&a=e0717f4c%27")
+    embed.set_image(url="https://media.deseretdigital.com/file/8d92395855?resize=width_1200&type=jpg&c=6&a=e0717f4c")
     embed.add_field(name="** **", value="** **", inline=True)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     return
