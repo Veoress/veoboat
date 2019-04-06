@@ -6,7 +6,10 @@ class Userinfo:
     self.bot = bot
     
   @commands.command()
-  async def userinfo(self):
+  async def userinfo(self, ctx, user: discord.Member=None):
+    if not user:
+      user = ctx.message.author
+      
     embed=discord.Embed(title="test", description=" {} ".format(user.mention), color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
