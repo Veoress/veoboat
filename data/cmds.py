@@ -16,12 +16,13 @@ class Cmds:
     return
   
   @commands.command(pass_context=True)
-  async def ping(self, ctx):
-    channel = ctx.message.channel
-    t1 = time.perf_counter()
-    await self.bot.send_typing(channel)
-    t2 = time.perf_counter()
-    await self.bot.say("**ping:** {} ms".format(round((t2-t1)*1000)))
+  async def fortmap(self, ctx):
+    embed=discord.Embed(title="**Fortnite Map**", description="** **", color=0xb51ea9)
+    embed.set_author(name=" ")
+    embed.set_image(url="https://media.deseretdigital.com/file/8d92395855?resize=width_1200&type=jpg&c=6&a=e0717f4c%27")
+    embed.add_field(name="** **", value="** **", inline=True)
+    await self.bot.send_message(ctx.message.channel, embed=embed)
+    return
 
     
 def setup(bot):
