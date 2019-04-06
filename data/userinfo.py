@@ -7,6 +7,9 @@ class Userinfo:
     
   @commands.command(pass_context=True)
   async def userinfo(self, ctx, user: discord.User=None):
+    if not user:
+      user = ctx.message.author
+      
     await self.bot.say('userinfo command je v modu nastavování')
     return
 
