@@ -10,9 +10,10 @@ class Userinfo:
     if not user:
       user = ctx.message.author
       
-    embed=discord.Embed(title="**JMÉNO**", description="<@{}>".format(user.id), color=0xfed83d)
+    embed=discord.Embed(title="**INFORMACE O UŽIVATELI **", description=" ", color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
+    embed.add_field(name="**JMÉNO**", value="<@{}>".format(user.id), inline=False)
     embed.add_field(name="**STATUS**", value=" {} ".format(user.status), inline=True)
     embed.add_field(name="**NEJVĚTŠÍ ROLE**", value=" {} ".format(user.top_role.mention), inline=True)
     embed.add_field(name="**PŘIPOJIL SE**", value=" {} ".format(user.joined_at.strftime(" %-d.%-m. %Y %k:%M:%S ")), inline=False)
