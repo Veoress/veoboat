@@ -12,12 +12,12 @@ class Cmds:
     return
   
   @commands.command()
-  async def invite():
+  async def invite(self):
     await self.bot.say('**Invite:** \n https://discordapp.com/oauth2/authorize?client_id=563996504680038410&permissions=2146958839&scope=bot%27')
     return
   
   @commands.command()
-  async def veo_server():
+  async def veo_server(self):
     await self.bot.say('**Veoresův Server:** \n https://discord.gg/EFzU2qu%27')
     return
   
