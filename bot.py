@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 
 
-bot=commands.Bot(command_prefix='~')
+bot=commands.Bot(command_prefix='>')
 bot.remove_command('help')
 
 extensions = [ 'data.help', 'data.join', 'data.cmds', 'data.userinfo']
@@ -14,11 +14,11 @@ extensions = [ 'data.help', 'data.join', 'data.cmds', 'data.userinfo']
 async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
-        await bot.change_presence(game=discord.Game(name='{} | prefix'.format("~"))) 
+        await bot.change_presence(game=discord.Game(name='{} | prefix'.format(">"))) 
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name='{}help'.format("~")))
+        await bot.change_presence(game=discord.Game(name='{}help'.format(">")))
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name='GamingNetwork Server'))
+        await bot.change_presence(game=discord.Game(name='PandaGaming Server'))
         await asyncio.sleep(10)
         await bot.change_presence(game=discord.Game(name='Developed by ×Vēørēs×#0095'))
         await asyncio.sleep(10)
