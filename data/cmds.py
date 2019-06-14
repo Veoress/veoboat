@@ -21,6 +21,11 @@ class Cmds:
     await self.bot.say(random.randint(1,100))
     return
 
+  @commands.command()
+  async def ping(self):
+    await self.bot.say('Pong!')
+    return
+
     
 def setup(bot):
   bot.add_cog(Cmds(bot))
