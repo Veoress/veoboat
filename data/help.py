@@ -11,7 +11,7 @@ class Helper:
     embed.set_author(name=" ")
     embed.add_field(name="**4 |General:**", value="`ping, ahoj, help, userinfo `", inline=False)
     embed.add_field(name="**2 |Fun:**", value="`number`", inline=False)
-    embed.add_field(name="**1 |Bot:**", value="`pg_server`", inline=False)
+    embed.add_field(name="**1 |Bot:**", value="`pgserver`", inline=False)
     await self.bot.say(embed=embed)
     return
 
