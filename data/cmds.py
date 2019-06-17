@@ -8,7 +8,7 @@ class Cmds:
     
   @commands.command()
   async def load(self):
-    await self.bot.say('uložiště: **COMMANDS** bylo načteno')
+    await self.bot.say('uložiště: **COMMANDS** nefaká')
     return
    
   @commands.command()
