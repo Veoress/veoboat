@@ -24,7 +24,6 @@ async def my_background_task():
         
 @bot.event
 async def on_ready():
-    bot.leave_guild(bot.guilds)
     print("{} was loaded".format(bot.user.name))
     
 if __name__ == '__main__':
@@ -34,5 +33,5 @@ if __name__ == '__main__':
     except Exception as error:
       print('{} cannot be loaded. [{}]'.format(extension, error))
  
-bot.loop.create_task(my_background_task())
+bot.loop.create_task(my_background_tasks())
 bot.run(os.environ['BOT_TOKEN'])
