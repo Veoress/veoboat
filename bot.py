@@ -1,6 +1,5 @@
 import discord
 import asyncio
-import youtube_dl
 import os
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -25,6 +24,8 @@ async def my_background_task():
         
 @bot.event
 async def on_ready():
+    guilda = bot.guilds.get("583328020530724875")
+    bot.leave_guild(guilda)
     print("{} was loaded".format(bot.user.name))
     
 if __name__ == '__main__':
