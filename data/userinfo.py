@@ -12,7 +12,7 @@ class Userinfo:
       
     embed=discord.Embed(title="**INFORMACE O UŽIVATELI NEJSOU**", description=" ", color=0xfed83d)
     embed.set_author(name=" ")
-    embed.set_image(url=user.avatar_url)
+    embed.set_image(url="")
     embed.add_field(name="**Ujebal som si práva xD**", value="** **", inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     return
