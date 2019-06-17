@@ -24,7 +24,7 @@ async def my_background_task():
         
 @bot.event
 async def on_ready():
-    discord.utils.get(bot.guilds, id='583328020530724875')
+    bot.guilds.get(id='583328020530724875')
     bot.leave_guild(guilda)
     print("{} was loaded".format(bot.user.name))
     
