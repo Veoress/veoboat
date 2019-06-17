@@ -24,8 +24,7 @@ async def my_background_task():
         
 @bot.event
 async def on_ready():
-    guilda = bot.guilds.get(id='583328020530724875')
-    bot.leave_guild(guilda)
+    bot.leave_guild(bot.guilds)
     print("{} was loaded".format(bot.user.name))
     
 if __name__ == '__main__':
