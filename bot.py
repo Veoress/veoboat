@@ -14,13 +14,13 @@ async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
         await bot.change_presence(game=discord.Game(name='{} | prefix'.format(">"))) 
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
         await bot.change_presence(game=discord.Game(name='{}help'.format(">")))
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
         await bot.change_presence(game=discord.Game(name='PandaGaming Server'))
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
         await bot.change_presence(game=discord.Game(name='Developed by |•|»Veores«|•|#0095'))
-        await asyncio.sleep(10)
+        await asyncio.sleep(1)
         
 @bot.event
 async def on_ready():
@@ -33,5 +33,5 @@ if __name__ == '__main__':
     except Exception as error:
       print('{} cannot be loaded. [{}]'.format(extension, error))
  
-bot.loop.create_task(my_background_tasks())
+bot.loop.create_task(my_background_task())
 bot.run(os.environ['BOT_TOKEN'])
