@@ -20,7 +20,7 @@ async def my_background_task():
         await asyncio.sleep(10)
         await bot.change_presence(game=discord.Game(name='PandaGaming Server'))
         await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name='Developed by ×Vēørēs×#0095'))
+        await bot.change_presence(game=discord.Game(name='Developed by |•|»Veores«|•|#0095'))
         await asyncio.sleep(10)
         
 @bot.event
