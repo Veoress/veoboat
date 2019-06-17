@@ -13,7 +13,7 @@ class Cmds:
    
   @commands.command()
   async def ahoj(self):
-    await self.bot.say('**Ahoj :D**')
+    await self.bot.say('**no nazdar :D**')
     return
 
   @commands.command(pass_context=True)
