@@ -26,13 +26,9 @@ class Cmds:
     await self.bot.say('Pong!')
     return
 
-
   @commands.command()
-  async def pg_server(self):
-    embed=discord.Embed(title="**PandaGaming Server**", description="** **", color=0x54ce1a)
-    embed.set_author(name=" ")
-    embed.add_field(name="**Invite:**", value="`https://discord.gg/mNEhAJA`", inline=False)
-    await self.bot.say(embed=embed)
+  async def pgserver(self):
+    await self.bot.say('PandaGaming Server: https://discord.gg/mNEhAJA') 
     return
 
 def setup(bot):
