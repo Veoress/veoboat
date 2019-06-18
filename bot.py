@@ -14,13 +14,13 @@ async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
         await bot.change_presence(game=discord.Game(name='{} | prefix'.format(">"))) 
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
         await bot.change_presence(game=discord.Game(name='{}help'.format(">")))
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
         await bot.change_presence(game=discord.Game(name='PandaGaming Server'))
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
         await bot.change_presence(game=discord.Game(name='Developed by |•|»Veores«|•|#0095'))
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
         
 @bot.event
 async def on_ready():
