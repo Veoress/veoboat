@@ -10,10 +10,10 @@ class Userinfo:
     if not user:
       user = ctx.message.author
       
-    embed=discord.Embed(title="**INFORMACE O UŽIVATELI NEJSOU**", description=" ", color=0xfed83d)
+    embed=discord.Embed(title="**INFORMACE O UŽIVATELI**", description=" ", color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url="")
-    embed.add_field(name="**Ujebal som si práva xD**", value="** **", inline=False)
+    embed.add_field(name="**TENTO COMMAND JE MOMENTÁLNĚ NEFUNKČNÍ**", value="** **", inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     return
 
