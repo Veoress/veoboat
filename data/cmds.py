@@ -17,7 +17,7 @@ class Cmds:
     return
 
   @commands.command(pass_context=True)
-  async def number(self, ctx):
+  async def number(self):
     await self.bot.say(random.randit(1,100)
     return
 
