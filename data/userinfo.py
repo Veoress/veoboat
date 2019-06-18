@@ -6,9 +6,8 @@ class Userinfo:
     self.bot = bot
     
   @commands.command(pass_context=True)
-  async def userinfo(self, ctx, user: discord.User=None):
-    if not user:
-      user = ctx.message.author
+  async def userinfo(self, ctx):
+    user = ctx.message.author
       
     embed=discord.Embed(title="**INFORMACE O UŽIVATELI**", description=" ", color=0xfed83d)
     embed.set_author(name=" ")
