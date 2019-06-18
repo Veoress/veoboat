@@ -9,7 +9,7 @@ class Helper:
   async def help(self):
     embed=discord.Embed(title="**Help**", description="** **", color=0x54ce1a)
     embed.set_author(name=" ")
-    embed.add_field(name="**Pomož si sám**", value="||nemáš zač xD||", inline=False)
+    embed.add_field(name="**COMMANDS: ahoj, ping, pgserver, userinfo, number**", value="", inline=False)
     await self.bot.say(embed=embed)
     return
 
