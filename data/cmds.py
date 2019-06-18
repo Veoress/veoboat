@@ -13,22 +13,22 @@ class Cmds:
    
   @commands.command()
   async def ahoj(self):
-    await self.bot.say('**no nazdar :D**')
+    await self.bot.say('**Ahoj :D**')
     return
 
   @commands.command(pass_context=True)
   async def number(self, ctx):
-    await self.bot.say("Práva byla odcizena xD")
+    await self.bot.say(random.randit(1,100)
     return
 
   @commands.command()
   async def ping(self):
-    await self.bot.say('nefaká')
+    await self.bot.say('Pong!')
     return
 
   @commands.command()
   async def pgserver(self):
-    await self.bot.say('PandaGaming Server: https://discord.gg/mNEhAJA \n tento command si klidně nechte xDDD') 
+    await self.bot.say('PandaGaming Server: https://discord.gg/mNEhAJA') 
     return
 
 def setup(bot):
